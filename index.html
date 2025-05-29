@@ -1,106 +1,49 @@
- <!-- HTML File-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-    <div class="wrapper">
+  <div class="mainContainer">
+    <div class="container">
+      <div class="header">
+        <div>Weather App</div>
+      </div>
 
-        <h1>AakashVani</h1>
-
-        <div class="tab-container">
-            <p class="tab" data-userWeather>Your City</p>
-            <p class="tab" data-searchWeather>Search City</p>
+      <div class="box">
+        <div class="search-city">
+          <input type="text" placeholder="Enter city name" />
+          <button><img src="C:\Users\91730\Desktop\project\weather app\search.png" alt="Search" /></button>
         </div>
 
-        <div class="weather-container">
-
-            <!-- grant location container-->
-            <div class="sub-container grant-location-container">
-                <img src="./assets/location.png" width="80" height="80" loading="lazy">
-                <p>Grant Location Access</p>
-                <p>Allow Access to get weather information</p>
-                <button class="btn" data-grantAccess>Grant Access</button>
-            </div>
-
-            <!-- search form -> form-container-->
-            <form class="form-container" data-searchForm>
-                <input placeholder="Enter City..." data-searchInput>
-                <button class="btn" type="submit">
-                    <img src="./assets/search.png"  width="20" height="20" loading="lazy">
-                </button>
-            </form>
-
-            <!--- loading screen container -->
-            <div class="sub-container loading-container">
-                <img src="./assets/loading.gif" width="150" height="150">
-                <p>Loading</p>
-            </div>
-
-            <!-- show weather info -->
-            <div class="sub-container user-info-container">
-
-                <!--city name and Flag-->
-                <div class="name">
-                    <p data-cityName></p>
-                    <img data-countryIcon>
-                </div>
-
-                <!-- weather descriptuion-->
-                <p data-weatherDesc></p>
-                <!--weather Icon-->
-                <img data-weatherIcon>
-                <!--temperature-->
-                <p data-temp></p>
-
-                <!--3 cards - parameters-->
-                <div class="parameter-container">
-
-                    <!--card 1-->
-                    <div class="parameter">
-                        <img src="./assets/wind.png" >
-                        <p>windspeed</p>
-                        <p data-windspeed></p>
-                    </div>
-
-                    <!--card 2-->
-                    <div class="parameter">
-                        <img src="./assets/humidity.png" >
-                        <p>humidity</p>
-                        <p data-humidity></p>
-                    </div>
-
-                    <!--card 3-->
-                    <div class="parameter">
-                        <img src="./assets/cloud.png" >
-                        <p>Clouds</p>
-                        <p data-cloudiness></p>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-
+        <div class="weather">
+          <img src="C:\Users\91730\Desktop\project\weather app\cloudy.jpg" class="weather-icon" alt="Weather Icon" />
+          <h1 class="temp">22°c</h1>
+          <h2 class="city">Delhi</h2>
         </div>
 
-
+        <div class="details">
+          <div class="col">
+            <img src="C:\Users\91730\Desktop\project\weather app\humidity.webp" alt="Humidity" />
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="C:\Users\91730\Desktop\project\weather app\wind.png" alt="Wind Speed" />
+            <div>
+              <p class="wind">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-    <script src="script.js"></script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
